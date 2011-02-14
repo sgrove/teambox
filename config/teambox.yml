@@ -5,7 +5,7 @@
 # Configuration shared between all environments:
 defaults: &defaults
   # The domain from where your app is served
-  app_domain: <%= ENV["BUSHIDO_DOMAIN"] %>.bushi.do
+  app_domain: <%= ENV["BUSHIDO_SUBDOMAIN"] %>.bushi.do
 
   # How many activities should activity feeds display?
   activities_per_page: 25
