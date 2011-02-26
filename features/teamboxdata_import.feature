@@ -2,7 +2,7 @@ Feature: Importing data
 
 Background: 
   Given a project exists with name: "Ruby Rockstars"
-  And I am logged in as mislav
+  And @mislav exists and is logged in
   And I am in the project called "Ruby Rockstars"
   And I am an administrator in the organization of the project called "Ruby Rockstars"
   And the organization of the project called "Ruby Rockstars" is called "Teambox Data"
@@ -59,7 +59,6 @@ Scenario: Mislav imports another historic project
     | Stevie Hobs (@steve)                  |  Frodo Baggins (@frodo)    |
     | Put all projects in this organization | Teambox Data               |
   And I press "Import"
-  Then show me the page
   Then I should see "Imported projects"
   And I should see "Hobo Pro"
   And @mislav should receive 1 email
